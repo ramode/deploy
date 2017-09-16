@@ -23,7 +23,7 @@ ${ROOT_DIR}/etc/rabbitmq-env.conf: ${ROOT_DIR}/etc ${ROOT_DIR}/var/log
 ${RABBIT}: ${ROOT_DIR}/bin/rabbitmq-env
 
 runrabbit: ${ROOT_DIR}/bin/rabbitmq-server ${ROOT_DIR}/etc/rabbitmq-env.conf
-	ROOT_DIR=${ROOT_DIR} RABBITMQ_CONF_ENV_FILE=${ROOT_DIR}/etc/rabbitmq-env.conf ${ROOT_DIR}/bin/rabbitmq-server
+	ROOT_DIR=${ROOT_DIR} RABBITMQ_CONF_ENV_FILE=${ROOT_DIR}/etc/rabbitmq-env.conf ${ROOT_DIR}/bin/rabbitmq-server -detached
 
 stoprabbit: ${ROOT_DIR}/bin/rabbitmqctl ${ROOT_DIR}/etc/rabbitmq-env.conf
 	ROOT_DIR=${ROOT_DIR} RABBITMQ_CONF_ENV_FILE=${ROOT_DIR}/etc/rabbitmq-env.conf ${ROOT_DIR}/bin/rabbitmqctl stop
