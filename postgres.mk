@@ -7,3 +7,6 @@ ${ROOT_DIR}/var/db/base: ${ROOT_DIR}/var
 
 runpg: ${POSTGRES} ${ROOT_DIR}/var/db/base ${ROOT_DIR}/run
 	${POSTGRES} -D ${ROOT_DIR}/var/db/ -c log_destination=stderr -c unix_socket_directories=${ROOT_DIR}/run/ &
+
+stoppg: ${ROOT_DIR}/var/db/postmaster.pid
+	kill `cat ${ROOT_DIR}/var/db/postmaster.pid`
