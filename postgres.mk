@@ -1,4 +1,4 @@
-include ../run-billing-deploy/Makefile.vars
+include ./Makefile.vars
 
 ${ROOT_DIR}/var/db/base: ${ROOT_DIR}/var
 	install -m 700 -d ${ROOT_DIR}/var/db/

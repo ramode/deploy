@@ -1,4 +1,4 @@
-include ../run-billing-deploy/Makefile.vars
+include ./Makefile.vars
 
 
 ${DOWNLOADS}/rabbitmq-${RABBIT_VERSION}.tar.xz: ${DOWNLOADS}

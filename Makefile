@@ -32,4 +32,7 @@ ${ROOT_DIR}/run:
 
 
 
+install: ${ROOT_DIR}/collector ${ROOT_DIR}/var/db/base ${PYTHON} ${RABBIT}
 
+${ROOT_DIR}/collector:
+	git clone git@github.com:ramode/collector.git ${ROOT_DIR}/collector
