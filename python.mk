@@ -1,4 +1,4 @@
-include ./Makefile.vars
+include ../deploy/Makefile.vars
 
 ${DOWNLOADS}/Python-${PYTHON_VERSION}.tar.xz: ${DOWNLOADS}
 	wget -O ${DOWNLOADS}/Python-${PYTHON_VERSION}.tar.xz ${PYTHON_URL}

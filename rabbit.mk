@@ -1,4 +1,4 @@
-include ./Makefile.vars
+include ../deploy/Makefile.vars
 
 
 ${DOWNLOADS}/rabbitmq-${RABBIT_VERSION}.tar.xz: ${DOWNLOADS}
